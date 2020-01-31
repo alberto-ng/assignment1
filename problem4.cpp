@@ -22,24 +22,28 @@ use a loop to estimate the price adjusted for inflation. (Hint: Use a loop.)
      double itemCost, inflationRate;
      int numYears;
 
-     // ask user
+     // ask user cost of item
      cout << "Cost of item?" << endl;
      cin >> itemCost;
 
+     // ask user years from purchase
      cout << "Years from purchase?" << endl;
      cin >> numYears;
 
+     // ask user the inflation rate
      cout << "Enter rate of inflation in percentage. (5.6% -> 5.6)" << endl;
      cin >> inflationRate;
-
+     // change percentage to decimal
      inflationRate /= 100;
 
+     // for loop to iterate each year
      for (int i = 0; i < numYears; ++i){
          itemCost += (itemCost * inflationRate);
      }
 
+     // output to user estimated cost
      cout << "Estimated cost in " << numYears << " years: $" << itemCost << endl;
 
-    
+
      return 0;
  }
